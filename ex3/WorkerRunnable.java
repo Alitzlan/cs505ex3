@@ -23,8 +23,7 @@ public class WorkerRunnable implements Runnable {
 
 			}
 		} catch (InterruptedException e) {
-			// should never happen
-			e.printStackTrace();
+			System.out.println(String.format("Thread %d interrupted.", Thread.currentThread().getId()));
 		} finally {
 			System.out.println(String.format("Thread %d ends.", Thread.currentThread().getId()));
 		}
