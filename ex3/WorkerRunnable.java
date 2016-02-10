@@ -16,7 +16,7 @@ public class WorkerRunnable implements Runnable {
 				item = itemRnd.nextInt(Main.itemBound);
 				if (action >= Main.updThresh) // contain
 					Main.set.contain(item);
-				else if (action > Main.insThresh) // remove
+				else if (action >= Main.insThresh) // remove
 					Main.set.remove(item);
 				else // insert
 					Main.set.insert(item);
