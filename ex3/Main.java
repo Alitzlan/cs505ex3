@@ -114,8 +114,13 @@ public class Main {
 		}
 		
 		Random rnd = new Random();
-		for(int i = 0;i < initListSz;i++)
-			set.insert(rnd.nextInt(itemBound));
+		boolean res;
+		for(int i = 0;i < initListSz;i++) {
+			res = set.insert(rnd.nextInt(itemBound));
+			// ensure number of elements
+			if(!res)
+				i--;
+		}
 	}
 
 	public static void main(String[] args) throws InterruptedException {
