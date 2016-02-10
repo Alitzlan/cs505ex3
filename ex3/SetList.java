@@ -10,9 +10,12 @@ public class SetList {
 	
 	public void printSet() { // not thread safe!!!
 		Node curr = head.next;
+		int sz = 0;
 		while (curr.key < Integer.MAX_VALUE) {
+			sz++;
 			System.out.print(Integer.toString(curr.key) + " ");
 			curr = curr.next;
 		}
+		System.out.println("\nEnd printing set of size " + Integer.toString(sz));
 	}
 }
