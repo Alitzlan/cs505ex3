@@ -1,11 +1,12 @@
 package ex3;
 
-import sun.misc.Lock;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Node {
 	public int key;
 	public Node next;
-	private Lock lock = new Lock();
+	private Lock lock = new ReentrantLock();
 
 	public Node(int item) {
 		key = item;

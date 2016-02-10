@@ -1,9 +1,10 @@
 package ex3;
 
-import sun.misc.Lock;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class CGSet extends SetList implements IntSet {
-	private Lock lock = new Lock();
+	private Lock lock = new ReentrantLock();
 
 	@Override
 	public boolean insert(int item) throws InterruptedException {
